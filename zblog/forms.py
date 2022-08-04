@@ -8,6 +8,8 @@ for item in choices:
     choices_list.append(item)
 
 class PostForm(forms.ModelForm):
+    # author = forms.ChoiceField(widget=forms.HiddenInput())
+
     class Meta:
         model = Post
         fields = ('title', 'title_tag', 'author', 'category','body')
