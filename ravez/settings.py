@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #apps
     'zblog',
     'members',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [

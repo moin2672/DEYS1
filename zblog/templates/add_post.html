@@ -8,6 +8,7 @@
   {% if user.is_authenticated %}
     <h1>Add Post..</h1><br><br>
     <form method="POST">{% csrf_token %}
+      {{form.media}}
       {{form.as_p}}
       <button class="btn btn-sm btn-primary" type="submit">Add Post</button>
       <a href="{% url 'home' %}" class="btn btn-sm btn-secondary">Cancel</a>
@@ -22,6 +23,8 @@
       var name = "{{user.id}}"
       // document.getElementById("id_author").style.display = 'none'
       document.getElementById("id_author").selectedIndex = name
+      // document.getElementById("django-ckeditor-widget").classList.add("form-control");
+      // document.getElementById("cke_id_body").classList.add("form-control");
       // document.getElementById("id_author").disabled = true
       
     </script>
